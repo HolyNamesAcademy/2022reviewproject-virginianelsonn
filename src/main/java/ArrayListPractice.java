@@ -8,9 +8,7 @@ public class ArrayListPractice {
      * @return The first element in the list.
      */
     public static int GetFirst(ArrayList<Integer> numbers) {
-
-        // write your code above and remove the line below
-        throw new UnsupportedOperationException();
+        return numbers.get(0);
     }
 
     /**
@@ -20,9 +18,7 @@ public class ArrayListPractice {
      * @return The third element in the list.
      */
     public static int GetThird(ArrayList<Integer> numbers) {
-
-        // write your code above and remove the line below
-        throw new UnsupportedOperationException();
+        return numbers.get(2);
     }
 
     /**
@@ -32,9 +28,7 @@ public class ArrayListPractice {
      * @return The last element in the list.
      */
     public static int GetLast(ArrayList<Integer> numbers) {
-
-        // write your code above and remove the line below
-        throw new UnsupportedOperationException();
+        return numbers.size()-1;
     }
 
     /**
@@ -44,15 +38,17 @@ public class ArrayListPractice {
      * @return The sum of the elements in the list.
      */
     public static int GetSum(ArrayList<Integer> numbers) {
-
-        // write your code above and remove the line below
-        throw new UnsupportedOperationException();
+        int sum = 0;
+        for (Integer number : numbers) {
+            sum += number;
+        }
+        return sum;
     }
 
     /**
-     * Returns a string that contains all of the numbers in the ArrayList
+     * Returns a string that contains all the numbers in the ArrayList
      * separated by one space.
-     * 
+     * <p>
      * For example, if numbers = {1, 4, 3, 2, 6}, your output should
      * be "1 4 3 2 6".
      * 
@@ -73,9 +69,13 @@ String numberList = "";
      * @return The largest element in the list.
      */
     public static int GetMax(ArrayList<Integer> numbers) {
-
-        // write your code above and remove the line below
-        throw new UnsupportedOperationException();
+        int max = numbers.get(0);
+        for(Integer num: numbers)
+        {
+            if(num>max)
+                max = num;
+        }
+        return max;
     }
 
     /**
@@ -93,9 +93,19 @@ String numberList = "";
      * @return A list of all numbers between first and last.
      */
     public static ArrayList<Integer> CreateNumberArray(int first, int last) {
-
-        // write your code above and remove the line below
-        throw new UnsupportedOperationException();
+        ArrayList<Integer> newArray = new ArrayList<>();
+        if (first == last)
+            return newArray;
+        if (last < first)
+            return newArray;
+        else
+        {
+            for (int i = first; i < last; i++) {
+                int num = newArray.get(i);
+                newArray.add(num);
+            }
+        return newArray;
+        }
     }
 
     /**

@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Main {
     /**
      * Start program execution
-     * @param args
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -16,15 +15,15 @@ public class Main {
             String program = scanner.next();
 
             // Run desired program
-            if (program.toLowerCase().equals("s") || program.toLowerCase().equals("shapes")) {
+            if (program.equalsIgnoreCase("s") || program.toLowerCase().equals("shapes")) {
                 Shapes.Run();
                 break;
             }
-            else if (program.toLowerCase().equals("b") || program.toLowerCase().equals("bankaccount")) {
+            else if (program.toLowerCase().equals("b") || program.toLowerCase().equals("bankAccount")) {
                 BankAccountManager.Run();
                 break;
             }
-            else if (program.toLowerCase().equals("a") || program.toLowerCase().equals("arraylist")) {
+            else if (program.equalsIgnoreCase("a") || program.equalsIgnoreCase("arraylist")) {
                 ArrayListPracticeMain.Run();
                 break;
             }

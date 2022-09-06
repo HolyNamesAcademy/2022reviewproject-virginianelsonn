@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BankAccountManager {
+public class BankAccountManager{
 
     public static void Run() {
         // Initialize the scanner so we can read in user input
@@ -61,14 +61,14 @@ public class BankAccountManager {
 
     /**
      * Returns a string representation of a BankAccount object. The string looks like this:
-     * 
+     * <p>
      *      Name: Serena Williams
      *      Account Balance: 1000000.00
-     * 
-     * @return String
+     *
      */
     public static void PrintAccountInfo(BankAccount account)
     {
+        System.out.println("Name: " + account.GetName() + "/n" + "Account Balance: " + account.GetBalance());
 
         // write your code above and remove the line below
         throw new UnsupportedOperationException();
