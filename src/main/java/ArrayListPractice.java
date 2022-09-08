@@ -56,10 +56,10 @@ public class ArrayListPractice {
      * @return A string representing the list.
      */
     public static String ConvertToString(ArrayList<Integer> numbers) {
-String numberList = "";
+StringBuilder numberList = new StringBuilder();
         for(int i = 0; i <numbers.size() - 1; i++)
-            numberList+=numbers.get(i) + " ";
-        numberList+=numbers.get(numbers.size()-1); return numberList;
+            numberList.append(numbers.get(i)).append(" ");
+        numberList.append(numbers.get(numbers.size() - 1)); return numberList.toString();
     }
 
     /**
@@ -116,9 +116,12 @@ String numberList = "";
      * @return The first student whose favorite color is the one specified.
      */
     public static Student GetFirstStudentWithFavoriteColor(ArrayList<Student> students, String color) {
-
-        // write your code above and remove the line below
-        throw new UnsupportedOperationException();
+        for(int i=0; i<students.size(); i++)
+        {
+            if(students.get(i).equals(color))
+                return students.get(i);
+        }
+        return students.get(1);
     }
 
     /**
@@ -129,9 +132,12 @@ String numberList = "";
      * @return The favorite color of the specified student.
      */
     public static String GetFavoriteColorOfStudent(ArrayList<Student> students, String name) {
-
-        // write your code above and remove the line below
-        throw new UnsupportedOperationException();
+        for(int i=0; i<students.size(); i++)
+        {
+            if(students.get(i).equals(name))
+                return students.get(i).GetFavoriteColor();
+        }
+        return "Couldn't find student";
     }
 
     /**
@@ -141,6 +147,11 @@ String numberList = "";
      * @return The tallest student in the list.
      */
     public static Student GetTallestStudent(ArrayList<Student> students) {
+        for(int i=0; i<students.size(); i++)
+        {
+
+        }
+
 
         // write your code above and remove the line below
         throw new UnsupportedOperationException();
