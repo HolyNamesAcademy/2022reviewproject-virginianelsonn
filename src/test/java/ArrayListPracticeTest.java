@@ -1,12 +1,7 @@
-import org.junit.Before;
 import org.junit.Test;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Random;
-
-import org.junit.Assert.*;
 
 import static junit.framework.TestCase.*;
 
@@ -170,7 +165,7 @@ public class ArrayListPracticeTest {
         ));
 
         // Act
-        ArrayList<Student> students = ArrayListPractice.CreateStudentArray(names, heights, gradeLevels, favoriteColors, bankAccounts);
+        ArrayList<Student> students = ArrayListPractice.CreateStudentArray();
 
         // Assert
         ArrayList<Student> expected = new ArrayList<>(
@@ -199,7 +194,7 @@ public class ArrayListPracticeTest {
                "Team 3: Michael\n";
 
         // Act
-        String actual = ArrayListPractice.GetTeamsString(teams);
+        String actual = ArrayListPractice.GetTeamsString();
 
         // Assert
         assertEquals(expected.trim(), actual.trim());

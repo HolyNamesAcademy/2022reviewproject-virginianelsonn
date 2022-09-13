@@ -147,14 +147,17 @@ StringBuilder numberList = new StringBuilder();
      * @return The tallest student in the list.
      */
     public static Student GetTallestStudent(ArrayList<Student> students) {
+        int max = students.get(0).GetHeight();
+        int index = 0;
         for(int i=0; i<students.size(); i++)
         {
-
+            if(students.get(i).GetHeight()>max){
+                max = students.get(i).GetHeight();
+                index = i;
+            }
+            return students.get(index);
         }
-
-
-        // write your code above and remove the line below
-        throw new UnsupportedOperationException();
+        return students.get(0);
     }
 
     /**
@@ -162,14 +165,9 @@ StringBuilder numberList = new StringBuilder();
      * (names[0], heights[0] ...) are for the first student. (names[1], height[1]...)
      * are for the second student, etc.
      * 
-     * @param names The list of names of the students.
-     * @param heights The list of heights of the students.
-     * @param gradeLevels The list of gradeLevels of the students.
-     * @param favoriteColors The list of favoriteColors of the students.
-     * @param bankAccounts The list of bankAccounts of the students.
      * @return List of Student objects.
      */
-    public static ArrayList<Student> CreateStudentArray(ArrayList<String> names, ArrayList<Integer> heights, ArrayList<Integer> gradeLevels, ArrayList<String> favoriteColors, ArrayList<BankAccount> bankAccounts) {
+    public static ArrayList<Student> CreateStudentArray() {
 
         // write your code above and remove the line below
         throw new UnsupportedOperationException();
@@ -178,16 +176,15 @@ StringBuilder numberList = new StringBuilder();
     /**
      * Returns a string that lists teams from a 2-D ArrayList. Each ArrayList in
      * the bigger ArrayList contains members of the team.
-     * 
+     * <p>
      * The expected output looks like this:
      * Team 1: Amy, Abby, Arnold
      * Team 2: Bob, Beatrice, Becky, Ben
      * Team 3: Claire
      * 
-     * @param teams The list of teams of students.
      * @return A string that lists the team number followed by each team.
      */
-    public static String GetTeamsString(ArrayList<ArrayList<Student>> teams) {
+    public static String GetTeamsString() {
 
         // write your code above and remove the line below
         throw new UnsupportedOperationException();
@@ -201,9 +198,12 @@ StringBuilder numberList = new StringBuilder();
      * @param newFavoriteColor The new favorite color of the student.
      */
     public static void UpdateFavoriteColor(ArrayList<Student> students, String name, String newFavoriteColor) {
-
-        // write your code above and remove the line below
-        throw new UnsupportedOperationException();
+        for(int i = 0; i<students.size(); i++)
+        {
+            if(students.get(i).GetName().equals(name)){
+                students.get(i).SetFavoriteColor(newFavoriteColor);
+            }
+        }
     }
 
     /**
