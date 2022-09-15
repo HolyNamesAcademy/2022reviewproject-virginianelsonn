@@ -214,7 +214,14 @@ StringBuilder numberList = new StringBuilder();
      * @return An ArrayList containing all the students in gradeLevel.
      */
     public static ArrayList<Student> GetStudentsInGradeLevel(ArrayList<Student> students, int gradeLevel) {
-
+       ArrayList<Student> newArray = new ArrayList<Student>();
+        for(int i = 0; i<students.size(); i++)
+        {
+            if(students.get(i).GetGradeLevel() == gradeLevel)
+            {
+                newArray.add(students.get(i));
+            }
+        }
         // write your code above and remove the line below
         throw new UnsupportedOperationException();
     }
@@ -230,6 +237,21 @@ StringBuilder numberList = new StringBuilder();
      *     had sufficient funds in their account. Otherwise, false.
      */
     public static boolean TransferMoney(ArrayList<Student> students, String fromStudentName, String toStudentName, double amount) {
+        for(int i = 0; i<students.size(); i++)
+        {
+            if(students.get(i).GetName().equals(fromStudentName)) {
+                if (students.get(i).GetBankAccount().GetBalance() < amount) {
+                    students.get(i).GetBankAccount().Withdraw(amount);
+                }
+
+                if (students.get(i).GetName().equals(toStudentName)) {
+                    students.get(i).GetBankAccount().Deposit(amount);
+                    return true;
+                }
+            }
+            return false;
+
+        }
 
         // write your code above and remove the line below
         throw new UnsupportedOperationException();
