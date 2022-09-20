@@ -45,7 +45,7 @@ public class ShapeMakerTest {
 
     @Test
     public void printBackwardsRightTriangle() throws Exception {
-        String[] output = ShapeMaker.PrintBackwardsRightTriangle(3).split("\n");
+        String[] output = ShapeMaker.PrintBackwardsRightTriangle().split("\n");
 
         assertEquals("Number of Lines", 3, output.length);
         assertEquals("Line 1", "    *", trimRight(output[0]));
@@ -55,7 +55,7 @@ public class ShapeMakerTest {
 
     @Test
     public void printOddEquilateralTriangle() throws Exception {
-        String[] output = ShapeMaker.PrintEquilateralTriangle(3).split("\n");
+        String[] output = ShapeMaker.PrintEquilateralTriangle().split("\n");
 
         assertEquals("Number of Lines", 3, output.length);
         assertEquals("Line 1", "  *", trimRight(output[0]));
@@ -65,7 +65,7 @@ public class ShapeMakerTest {
 
     @Test
     public void printEvenEquilateralTriangle() throws Exception {
-        String[] output = ShapeMaker.PrintEquilateralTriangle(4).split("\n");
+        String[] output = ShapeMaker.PrintEquilateralTriangle().split("\n");
 
         assertEquals("Number of Lines", 4, output.length);
         assertEquals("Line 1", "   *", trimRight(output[0]));
