@@ -109,6 +109,7 @@ public class ShapeMaker {
         // write your code here
         return "";
     }
+}
 
     /**
      * Returns a string that looks like a backwards right triangle with sides of size "size". If size = 5, the triangle looks like this:
@@ -122,27 +123,5 @@ public class ShapeMaker {
      * @return a string that looks like the shape above when printed
      */
 
-    public static String PrintBackwardsRightTriangle()
-    {
 
-        // write your code here
-        return "";
-    }
 
-    /**
-     * Returns a string that looks like an equilateral triangle with sides of size "size". If size = 5, the triangle looks like this:
-     * <p>
-     *         *
-     *        * *
-     *       * * *
-     *      * * * *
-     *     * * * * *
-     *
-     * @return a string that looks like the shape above when printed
-     */
-    public static String PrintEquilateralTriangle()
-    {
-        // write your code here
-        return "";
-    }
-}

@@ -25,11 +25,5 @@ public class Shapes {
 
         System.out.println("Inverted Right Triangle:");
         System.out.println(ShapeMaker.PrintInvertedRightTriangle(height));
-
-        System.out.println("Backwards Right Triangle:");
-        System.out.println(ShapeMaker.PrintBackwardsRightTriangle());
-
-        System.out.println("Equilateral Triangle:");
-        System.out.println(ShapeMaker.PrintEquilateralTriangle());
     }
 }

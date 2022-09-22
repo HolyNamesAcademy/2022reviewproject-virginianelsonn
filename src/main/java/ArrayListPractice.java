@@ -264,9 +264,17 @@ StringBuilder numberList = new StringBuilder();
      * @param students The list of students to advance to the next grade.
      */
     public static void UpdateGradeLevels(ArrayList<Student> students) {
+        for(int i = 0; i<students.size(); i++)
+        {
+            if(students.get(i).GetGradeLevel() < 12)
+            {
+                int grade = students.get(i).GetGradeLevel();
+                students.get(i).SetGradeLevel(grade++);
+            }
+            else
+                students.remove(i);
 
-        // write your code above and remove the line below
-        throw new UnsupportedOperationException();
+        }
     }
 
     /**
@@ -278,8 +286,19 @@ StringBuilder numberList = new StringBuilder();
      * @param students The list of students to sort.
      */
     public static void SortByGradeAndName(ArrayList<Student> students) {
+                for (int i = 0; i < students.size() - 1; i++)
+                {
+                    int index = i;
+                    for (int j = i + 1; j < students.size(); j++){
+                        if (students.get(j).GetGradeLevel() < students.get(index).GetGradeLevel()){
+                            index = j;//searching for lowest index
+                        }
+                    }
+                    int smallerNumber = students.get(index).GetGradeLevel();
 
-        // write your code above and remove the line below
-        throw new UnsupportedOperationException();
+                }
+            }
+
+
     }
-}
+
